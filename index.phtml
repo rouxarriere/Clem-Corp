@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Votre projet ? Notre aide</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|K2D" rel="stylesheet"> 
+    </head>
+        <header>
+        <?php if (isset($confirmation)) { echo $confirmation; } ?>
+            <nav>
+                <a href="index.phtml" class="logo"><div>&#60; Clem Corp /&#62;</div></a>
+                <ul>
+                    <li><a href="#presentation" class="menu link hvr-underline-from-center">Qui sommes nous ?</a></li>
+                    <li><a href="#réal" class="menu link hvr-underline-from-center">Nos réalisations</a></li>
+                    <li><a href="#avantages" class="menu link hvr-underline-from-center">Nos avantages</a></li>
+                    <li><a href="#contact" class="menu link hvr-underline-from-center">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+    <body>  
+        <main class='container'>
+            <section id="projet">
+                <h1>Un projet innovant ? Nous pouvons vous aider a le réaliser !</h1>
+            </section>        
+                
+            <section id="presentation">
+                <h2>Clem Corp, c'est quoi ?</h2>
+                    <img src='img/lequipe.jpg' alt="image de l'équipes" />
+                       
+                        <p>La Clem Corp est un agence web parisienne créee en 1997 et qui aide depuis plus de 20 ans les entreprises
+                            dans la création et la gestion de leurs site web. </p>
+                            
+                        <p class='gras'>Alors oui, des agences web y en a un paquet, mais celle ci est différente des autres ! </p> 
+                        
+                        <p>Et oui en effet, vous ne trouverez pas plus performant sur le marché, nous avons tout ce qui se fait de 
+                            mieux au niveau informatique, et tout ça en respectant l'environement car nos serveurs sont tout fabriqués
+                            en bois d'érable, ce qui les protèges contre les surchauffes. <br> Ce qui nous caracérise c'est aussi notre super équipe
+                            de developpeurs : Les meilleurs de la planète (y en a même un qui viens de Mars) et ils seront à votre 
+                            écoute tout au long de la création de votre site et nous assurons aussi le SAV. </p>
+
+                        <p class='gras'> Maintenant que vous en savez plus, a vous de nous en dire plus sur votre projet !</p>
+                        <a href="#contact">je suis pret !</a>
+            </section>
+
+                     <!-- Les Réalisation -->
+            <section id="réal">
+                <h2>Nos réal<span>isations</span></h2>
+               
+                    <table>
+                        <tr> 
+                        <?php
+                    foreach ($projets as $value) {
+                        if($value["id"]<=3){?>
+                            <td> 
+                                <div class="div">
+                                    <img src="<?php echo  $value["img"]?>" alt="<?php echo  $value["title"]?>"> 
+                                    <div class="text"><a href="<?php echo  $value["link"]?>"><?php echo  $value["title"]?> <i class="fas fa-arrow-circle-right"></i></a></div>
+                                </div>
+                            </td>
+                            <?php }} ?> 
+                        </tr>
+                        <tr> 
+                        <?php
+                    foreach ($projets as $value) {
+                        if($value["id"]>3){?>
+                            <td> 
+                                <div class="div">
+                                    <img src="<?php echo  $value["img"]?>" alt="<?php echo  $value["title"]?>"> 
+                                    <div class="text"><a href="<?php echo  $value["link"]?>"><?php echo  $value["title"]?> <i class="fas fa-arrow-circle-right"></i></a></div>
+                                </div>
+                            </td>
+                            <?php }} ?> 
+                        </tr>
+                    </table>
+
+                </section>
+
+
+                     <!-- Les Avantages -->
+                <section id="avantages">
+                    <h2>Nos avantages</h2>
+                        <article class="avantage">
+                            <img class="pls" src='img/coin-of-dollar.png' />
+                            <h3>Des tarifs souples</h3>
+                            <p>Nos tarifs sont accecibles a un public de professionels comme de particuliers, personnalisable a souhait.</p>
+                        </article>
+                        <article class="avantage">
+                            <img class="money" src='img/checked.png' />
+                            <h3>Un travail de qualité</h3>
+                            <p>Notre equipe est composée de personnes compétentes et profesionelles pour vous aider à mener vos projets à bout rapidement.</p>
+                        </article>
+                        <article class="avantage">
+                            <img class="rot" src='img/24-hours.png' />
+                            <h3>un service client efficace</h3>
+                            <p>Notre service client est disponible 24h/24, 7j/7 et s'engage a répondre à vos questions dans l'heure !</p>
+                        </article>
+                </section>
+
+                      <!-- Conctact -->               
+                <section id="contact">
+                    <h2>Venez nous dire un petit mot !</h2>
+                    <p>Si vous êtes ici c'est que vous avez quelques chose a nous dire,
+                        alors faite le !</p>
+                <div class="contact">
+                <form action="php/contact.php" method="post" autocomplete="off">
+                        <table>
+                            <tr> <td><input type="text" name="nom" placeholder="Nom" required> <input type="email"  name="mail" placeholder="Email" required></td> </tr>
+                            <tr> <td> <textarea type="text"  name="message" rows=10 cols=45 resize="none" placeholder="Oui bonjour ? C'est a quel sujet ?" required></textarea> </td></tr>
+                        </table>
+                        <input type="submit" value="Envoyer le message">
+                    </form>
+                        <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9914406081743!2d2.292292615492863!3d48.858373608662234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1566650917091!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                </div>
+                    
+                </section>
+                
+        </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    </body> -->
+        <!--FOOTER-->
+    <footer class="licence">
+        <a href="html"><span>&#60; Clem Corp /&#62;</span></a>
+        <table>
+        <tr>
+            <td><a href= "https://www.facebook.com/facebook" onclick="window.open(this.href); return false;"><i class="fab fa-facebook-f"></i></a></td> 
+            <td><a href="https://twitter.com/twitter" onclick="window.open(this.href); return false;"><i class="fab fa-twitter"></i></a></td>
+            <td><a href="https://www.linkedin.com/in/cl%C3%A9ment-chambard-856ba8177/"onclick="window.open(this.href); return false;"><i class="fab fa-linkedin-in"></i></a></td>
+        </tr>
+        </table>
+        <small>© 2019 - Clem Corp - made by Clément CHAMBARD.</small>
+        </footer>
+</html>
