@@ -1,0 +1,487 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    transition: all 0.1s ease 0s;
+}
+
+html{
+font-size: 62.5%;
+background: url(../img/bg_header.jpg) no-repeat fixed;
+background-size: cover;
+margin: 0;
+}
+
+
+body{
+    margin: 0;
+}
+
+/* HEADER */
+
+
+nav {
+    width: 100%;
+    margin: 5rem auto 2rem;
+    padding: 0 3rem;
+    font-family: 'K2D', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav a {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav a:hover{
+    color: lightcoral;
+}
+
+
+nav .logo{
+    color: lightcoral;
+    font-family: 'Abril Fatface', cursive;
+    font-size :2.5em;
+    transform: scale(1.9);
+}
+nav .logo:hover{
+    transform: scale(2);
+    text-shadow: 1px 1px 2px #000000;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 70%;
+}
+
+.link{
+    position: relative;
+}
+  
+.link:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 1px;
+    right: 0;
+    background: #fff;
+    transition: width .2s ease;
+}
+   
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: #fff;
+  }
+  
+  /* MAIN */
+h1{    
+    color: #000000;
+    margin: 115px 0;
+    font-size: 70px;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2); 
+}
+
+#projet {
+	text-align: center;
+	color: #FFFFFF;
+	padding: 12em 75px ;
+}
+
+#projet p {
+    padding-bottom: 50px;
+
+}
+
+h2 {
+    font-size: 5.5rem;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(153,153,153,0.1);
+    width: 75%;
+    text-align: center;
+    margin: 0 auto 35px;
+}
+h1, h2, h3{
+    font-family: 'K2D', sans-serif;
+}
+#presentation{
+    margin: 0;
+    padding: 40px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+#presentation h2, #presentation p{
+    color:#000000;
+}
+#presentation p{
+    font-size: 2em;
+    font-family: 'K2D', sans-serif;
+    text-align: left;
+}
+#presentation p.gras{
+    font-weight: bold;
+    text-align: center;
+}
+#presentation img{
+    width:50%;
+    float: left;
+    margin-right: 20px;
+}
+#presentation a{
+    text-decoration: none;  
+    border: 2px solid #000000;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'K2D', sans-serif;
+    font-weight: bold;
+}
+#presentation a:hover{
+    background: #000000;
+    color: #FFFFFF
+}    
+
+
+#réal{
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 87%,rgba(255,255,255,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#FFFFFF',GradientType=1 );
+}
+#réal h2 {
+    color: #FFFFFF;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(153,153,153,0.2);
+    width: 75%;
+    text-align: center;
+    margin: 0 auto 35px;
+}
+
+#réal table img{
+    width: 100%;
+    border: 1px solid #000000;
+}
+#réal .div{
+    position: relative;
+}
+#réal div.text{
+    position: absolute;
+    bottom: 18px;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 2% 11% 2%;
+    font-family: 'K2D', sans-serif;
+    font-size: 18px;  
+}
+#réal .div div.text a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#réal .div:hover img{
+opacity: 0.5;
+}
+
+#réal .div:hover div.text a{
+    color: red;
+}
+
+
+#forfaits{
+    background: blue;
+}
+#forfaits p{
+    font-size: 2em;
+}
+
+#forfaits h3{
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+}
+
+#forfaits articles {
+    margin: 0 auto;
+}
+#forfaits div{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 ;
+}
+
+
+#avantages{
+    margin: 0;
+    padding: 40px;
+    background: rgb(255,255,255);
+    background: linear-gradient(45deg,  rgba(255,255,255,1) 80%,rgba(255,255,255,1) 87%,rgba(255,255,255,1) 87%,rgba(0,0,0,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#000000',GradientType=1 );
+    
+}
+#avantages .avantage{
+    background-color: transparent;
+	display: inline-block;
+	vertical-align: top;
+	width: 33%;
+	margin: 0;
+	text-align: center;
+    padding: 0 20px;
+    font-size:2em; 
+    font-family: sans-serif
+}
+.avantage img {
+    font-size: 2.5rem;
+    width: 75px;
+	height: 75px;
+	line-height: 69px;
+}
+.avantage .rot:hover{
+    animation: rotate-center 0.4s ease-in-out both;
+}
+
+ @keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.avantage .pls:hover {
+    transform: scale(1.2);
+}
+
+
+.avantage .money:hover{
+	animation: bounce 0.35s ease infinite alternate;
+}
+
+@keyframes bounce{
+    from {transform: translateY(0);}
+    to   {transform: translateY(-20px);}
+}
+
+#contact{
+background: #EDEDED;
+}
+#contact input[type="text"], input[type="email"]{
+    border: 0;
+    border-bottom: 1px solid;
+    padding-left: 5px;
+    font-family: 'K2D', sans-serif;
+    background:#EDEDED;
+}
+
+#contact textarea{
+    resize:none;
+    font-family: 'K2D', sans-serif;
+}
+#contact .contact{
+    display: flex;
+    justify-content: center;
+}
+#contact form{
+    margin:15px;
+    text-align: center;
+}
+#contact form input[type='submit'] {
+    text-decoration: none;
+    border: 2px solid #000000;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 50px;
+    padding: 6px;
+    font-size: 13px;    
+    font-family: 'K2D', sans-serif;
+    font-weight: bold;
+}
+#contact form input[type="submit"]:hover{
+    background: #000000;
+    color: #FFFFFF
+}    
+#contact p {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'K2D', sans-serif;
+
+}
+
+.confirmation{
+    background: #D4EDDA;
+    border: 3px solid #aee2ba;
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'K2D', sans-serif;
+}
+
+/* FOOTER */
+.licence span {
+    color: #FFFFFF;
+    font-family: 'Abril Fatface', cursive;
+    font-size :1.5em;
+}
+.licence a{
+    text-decoration: none;
+}
+.licence a:hover{
+    color: red;
+
+}
+.licence {
+	background-color: #000000;
+	padding: 10px;
+	color: #FFFFFF;
+	font-size: 1.8em;
+    text-align: center;
+    margin-top: -11px;
+}
+
+.licence img {
+    width: 50px;
+}
+.licence .fab{
+    color: #FFFFFF;
+    font-size: 42px;
+    margin: 20px 10px 0;
+}
+.licence .fab:hover{
+    color: red;
+
+}
+.licence table{
+    margin: 0 auto;
+}
+.licence small{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width:720px){
+    .logo > div{
+        flex-basis: 100%;
+        margin: auto;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5rem;
+    }
+    nav ul li{
+        margin-bottom: 1.5rem;
+    }
+    #presentation img{
+       display: none;
+    }
+    #projet{
+        padding: 0;
+    }
+    nav{
+        flex-direction: column;
+    }
+    tr{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #réal div.text {
+        position: absolute;
+        bottom: 40px;
+        background: #000000;
+        color: #FFFFFF;
+        padding: 1% 4% 1%;
+        font-family: 'K2D', sans-serif;
+        font-size: 33px;
+    }
+    #réal span{
+        color:#000000;
+    }
+    #contact .contact{
+        text-align: center;
+        display: grid;
+    }
+    #contact form{
+        justify-items: center;
+        display: grid;
+    }
+}
+@media screen and (max-width:960px){
+    .logo > div{
+        flex-basis: 100%;
+        margin: auto;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5rem;
+    }
+    nav ul li{
+        margin-bottom: 1.5rem;
+    }
+    #presentation img{
+       display: none;
+    }
+    #projet{
+        padding: 0;
+    }
+    nav{
+        flex-direction: column;
+    }
+    tr{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #réal div.text {
+        position: absolute;
+        bottom: 40px;
+        background: #000000;
+        color: #FFFFFF;
+        padding: 1% 4% 1%;
+        font-family: 'K2D', sans-serif;
+        font-size: 33px;
+    }
+    #réal span{
+        color:#000000;
+    }
+    #contact .contact{
+        text-align: center;
+        display: grid;
+    }
+    #contact form{
+        justify-items: center;
+        display: grid;
+    }   
+}
+@media screen and (max-width:1133px){
+    nav {
+        width: 100%;
+        margin: 5rem auto 2rem;
+        padding: 0 3rem;
+        font-family: 'K2D', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: transparent;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+    }
+   
+}
